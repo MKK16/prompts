@@ -24,3 +24,24 @@ All agents must reuse existing feature files, step definitions, scenario context
 All agents must use configurable polling for asynchronous behavior, read environment-specific values and JKS paths from external configuration or environment variables, never expose credentials, never connect to production systems, and never modify production code unless explicitly requested.
 
 For this request, create only the five .agent.md files, show the files created, and stop without reading or changing src/main, src/test, pom.xml, build.gradle, requirements, OpenAPI files, or any other application files.
+
+====================================================================
+After the files are created
+Open the Copilot Chat panel.
+Start a new chat session.
+Open the agent selection dropdown.
+Select REST Response BDD Agent.
+Select or reference the API-related files.
+Send this short execution prompt:
+
+1.Analyze the selected REST API and generate executable Cucumber-JVM and REST Assured tests that validate only the REST response.
+2.Cover applicable positive, negative, boundary, authentication, authorization, malformed-request, unsupported-content-type, resource-not-found, and business-error scenarios.
+3.Reuse the existing BDD framework, generate only missing files, and do not validate MySQL, GemFire, Kafka, or other downstream systems.
+===========================================================================
+Creating an agent and using an agent are two separate actions:
+First prompt:
+Create the .agent.md definitions
+Second step:
+Select the required custom agent
+Third prompt:
+Ask that selected agent to perform the test-generation task
